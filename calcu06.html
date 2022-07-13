@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+<script>
+    function yes() {
+       var fir=document.getElementById("first").value;
+            document.getElementById("sec").value=fir;
+
+    }
+
+    function no() {
+            document.getElementById("sec").value=' ';       
+    }
+</script>
+</head>
+<body>
+   <input type="text" id="first"><br>
+   yes <input type="radio" name=add id="yes" onclick="yes()">
+   no <input type="radio" name=add id="no" onclick="no()"><br>
+   <input type="text" id="sec">
+    
+</body>
+</html>

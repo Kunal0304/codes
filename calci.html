@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <title></title>
+<script>
+    function calcii() {
+        first=document.getElementById("num1").value;
+        alert(first);
+        second=document.getElementById("num2").value;
+        alert(second);
+       op=document.getElementById("oper").value;
+        alert(op);
+
+        if (op=='+') {
+            document.write(parseInt(first) + parseInt(second))
+        }
+        if (op=='-') {
+            document.write(first - second)
+        }
+        if (op=='*') {
+            document.write(first * second)
+        }
+        if (op=='/') {
+            document.write(first / second)
+        }
+
+    }
+</script>
+</head>
+<body>
+    <input type="text" id=num1>
+    <input type="text" id=num2>
+    <select name="" id="oper">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+
+    </select>
+    <input type="text" id="oper" >
+    <button onclick="calcii()">=</button>
+</body>
+</html>

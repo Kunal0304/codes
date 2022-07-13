@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <script>
+
+        function add() {
+            var first=document.getElementById("one").value;
+            var sec=document.getElementById("two").value;
+            var result=document.getElementById("oper").value;
+
+            if (result=='+') {
+                var add=parseInt(first)+parseInt(sec);
+                document.getElementById("sum").value=add
+            }
+            if (result=='-') {
+                var sub=parseInt(first)-parseInt(sec);
+                document.getElementById("sum").value=sub
+            }
+            if (result=='*') {
+                var mul=parseInt(first)*parseInt(sec);
+                document.getElementById("sum").value=mul
+            }
+            if (result=='/') {
+                var div=parseInt(first)/parseInt(sec);
+                document.getElementById("sum").value=div
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id='one'>
+    <input type="text" id='two'>
+    <select id="oper">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <button onclick=add()>==</button>
+    result -: <input type="text" id="sum">
+</body>
+</html>

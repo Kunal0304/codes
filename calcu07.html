@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+
+    <script>
+     function same() {
+        
+        var name=document.getElementById("first").value;
+        document.getElementById("sec").value=name;
+        var capital=name.toUpperCase();
+        document.getElementById("cap").value=capital;
+        var small=name.toLowerCase();
+        document.getElementById("small").value=small;
+    }
+        </script>
+</head>
+<body>
+    <input type="text" id="first" onkeyup="same()"><br><br>
+    <input type="text" id= sec> <br><br>
+    <input type="text" id= cap> <br><br>
+    <input type="text" id= small> <br><br>
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <script>
+        function add() {
+            var one=document.getElementById("num1").value;
+            var two=document.getElementById("num2").value;
+            var total=parseInt(one)+parseInt(two);
+            document.getElementById("sum").innerHTML=total
+        }
+
+        function sub() {
+            var one=document.getElementById("num1").value;
+            var two=document.getElementById("num2").value;
+            var total=parseInt(one)-parseInt(two);
+            document.getElementById("sum").innerHTML=total
+        }
+
+        function mul() {
+            var one=document.getElementById("num1").value;
+            var two=document.getElementById("num2").value;
+            var total=parseInt(one)*parseInt(two);
+            document.getElementById("sum").innerHTML=total
+        }
+
+        function div() {
+            var one=document.getElementById("num1").value;
+            var two=document.getElementById("num2").value;
+            var total=parseInt(one)/parseInt(two);
+            document.getElementById("sum").innerHTML=total
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="num1">
+    <input type="text" id="num2">
+    <button onclick="add()">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="mul()">*</button>
+    <button onclick="div()">/</button>
+    result :- <span id="sum"></span>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+	<title>calcultor02</title>
+
+	<script>
+		function add() {
+		var	nu=document.getElementById("num1").value;
+		var	num=document.getElementById("num2").value;
+
+			
+		// var s= parseInt(nu)+parseInt(num);
+
+		var result=document.getElementById("ss").value;	
+			// alert(nu);
+			if (result=='+') {
+				var add=document.write(parseInt(nu)+parseInt(num))
+				document.getElementById("ss").value=Add;
+			}	
+			if (result=='-') {
+				var sub=document.write(parseInt(nu)-parseInt(num))
+				document.getElementById("ss").value=sub;
+
+			}		
+			if (result=='*') {
+				var mul=document.write(parseInt(nu)*parseInt(num))
+				document.getElementById("ss").value=mul;
+
+			}
+			if (result=='/') {
+				var div=document.write(parseInt(nu)/parseInt(num))
+				document.getElementById("ss").value=div;
+
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="num1">
+	<input type="text" id="num2">
+	<select name="" onclick="add()">
+		<option>+</option>
+		<option>-</option>
+		<option>*</option>
+		<option>/</option>
+	</select>	
+	<!-- <button onclick="add()">+</button> -->
+	result-: <span id=ss></span>
+</body>
+</html>

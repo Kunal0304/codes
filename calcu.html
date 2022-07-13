@@ -1,0 +1,127 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function addition()
+		{
+			var Firstnumber=document.getElementById("fn").value;
+			//alert(Firstnumber);
+			var Secondnumber=document.getElementById("sn").value;
+			//alert(Secondnumber);
+			var Addition=parseInt(Firstnumber)+parseInt(Secondnumber);
+			//alert(Addition);
+			document.getElementById("result").value=Addition;
+
+		}
+		function subtraction()
+		{
+			var Firstnumber=document.getElementById("fn").value;
+			//alert(Firstnumber);
+			var Secondnumber=document.getElementById("sn").value;
+			//alert(Secondnumber);
+			var Subtraction=parseInt(Firstnumber)-parseInt(Secondnumber);
+			//alert(Addition);
+			document.getElementById("result").value=Subtraction;
+
+		}
+		function multiplaction()
+		{
+			var Firstnumber=document.getElementById("fn").value;
+			//alert(Firstnumber);
+			var Secondnumber=document.getElementById("sn").value;
+			//alert(Secondnumber);
+			var Multiplaction=parseInt(Firstnumber)*parseInt(Secondnumber);
+			//alert(Addition);
+			document.getElementById("result").value=Multiplaction;
+
+		}
+		function divied()
+		{
+			var Firstnumber=document.getElementById("fn").value;
+			//alert(Firstnumber);
+			var Secondnumber=document.getElementById("sn").value;
+			//alert(Secondnumber);
+			var Divied=parseInt(Firstnumber)/parseInt(Secondnumber);
+			//alert(Addition);
+			document.getElementById("result").value=Divied;
+
+		}
+	</script>
+</head>
+<body>
+	First Number:-<input type="text" id="fn"><br><br>
+	Second Number:-<input type="text" id="sn"><br><br>
+	<button onclick="addition()">+</button> 
+	<button onclick="subtraction()">-</button>
+	<button onclick="multiplaction()">*</button>
+	<button onclick="divied()">/</button><br><br>
+	Result:-<input type="text" id="result">
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+	<script>
+
+		function addition()
+		{
+			var Firstnumber=document.getElementById("fn").value;
+			//alert(Firstnumber);
+			var Secondnumber=document.getElementById("sn").value;
+			//alert(Secondnumber);
+			var Addition=parseInt(Firstnumber)+parseInt(Secondnumber);
+			//alert(Addition);
+			document.getElementById("result").innerHTML=Addition;
+
+		}
+		function subtraction()
+		{
+			var Firstnumber=document.getElementById("fn").value;
+			//alert(Firstnumber);
+			var Secondnumber=document.getElementById("sn").value;
+			//alert(Secondnumber);
+			var Subtraction=parseInt(Firstnumber)-parseInt(Secondnumber);
+			//alert(Addition);
+			document.getElementById("result").innerHTML=Subtraction;
+
+		}
+        function multiplaction()
+		{
+			var Firstnumber=document.getElementById("fn").value;
+			//alert(Firstnumber);
+			var Secondnumber=document.getElementById("sn").value;
+			//alert(Secondnumber);
+			var Multiplaction=parseInt(Firstnumber)*parseInt(Secondnumber);
+			//alert(Addition);
+			document.getElementById("result").innerHTML=Multiplaction;
+
+		}
+		function divied()
+		{
+			var Firstnumber=document.getElementById("fn").value;
+			//alert(Firstnumber);
+			var Secondnumber=document.getElementById("sn").value;
+			//alert(Secondnumber);
+			var Divied=parseInt(Firstnumber)/parseInt(Secondnumber);
+			//alert(Addition);
+			document.getElementById("result").innerHTML=Divied;
+
+		}
+	</script>
+</head>
+<body>
+
+	First Number:-<input type="text" id="fn"><br><br>
+	Second Number:-<input type="text" id="sn"><br><br>
+	<button onclick="addition()" >+</button> 
+	<button onclick="subtraction()">-</button>
+	<button onclick="multiplaction()">*</button>
+	<button onclick="divied()">/</button><br><br>
+	Result:- <span id="result"></span>
+    
+
+</body>
+</html>
