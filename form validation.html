@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<style>.red{color: red;font-weight:1000 ;}
+	#sub{
+		margin-left: 40%;
+		background-color: red;
+		font-weight: 300;
+	}
+	body{background-color: lightgoldenrodyellow;}
+	form{background-color: palegreen;
+		width: 40%;
+		height: 220px;
+		margin-left: 30%;
+		margin-top:10% ;
+		border: 2px solid black;
+		padding: 20px;
+	}
+</style>
+
+<script type="text/javascript">
+	function validation()
+	{
+		var name=document.getElementById("name").value;
+		result=true;
+		if(name==""){
+		document.getElementById("name_error").innerHTML="  PLEASE ENTER NAME";			
+		result=false;
+		}
+		if(!name==""){
+		document.getElementById("name_error").innerHTML="";			
+		}
+	
+		var city=document.getElementById("city").value;
+		if(city==""){
+		document.getElementById("city_error").innerHTML="  PLEASE SELECT A CITY";		
+		result=false;
+		}
+		if(!city==""){
+		document.getElementById("city_error").innerHTML="";	
+		}
+				
+
+		var GENDER=document.getElementsByName("gender");
+		var count=GENDER.length;
+		for(var i=0;i<count;i++)
+		{
+			if(GENDER[i].checked==true){
+				document.getElementById("radio_error").innerHTML="";
+				break;
+			}
+			else{
+				document.getElementById("radio_error").innerHTML="  PLEASE CHECKED";
+					result=false;
+			}
+		}
+		var HOBBY=document.getElementsByName("hobby");
+		var len =HOBBY.length;
+		for(var i=0;i<len;i++){
+			if(HOBBY[i].checked==true){
+			document.getElementById("check_error").innerHTML="";
+				break;	
+			}
+			else{
+				document.getElementById("check_error").innerHTML="  PLEASE CHECKED";
+					result=false;	
+			}
+		}
+		var img=document.forms['form_valid']['image'];
+		if(img.value==""){
+			document.getElementById("img_error").innerHTML="PLEASE UPLOAD IMAGE";
+			result=false;
+		}
+		else{
+		document.getElementById("img_error").innerHTML="";
+		}
+ 
+		return result;
+	}
+</script>
+</head>
+
+<body>
+	<form action="p8.html" name="form_valid" onsubmit="return validation();">
+NAME:- <span class=red>*</span><input type="text" id="name" placeholder="Enter Name">
+		 <span id="name_error" class="red"></span><br><br>
+		CITY:- <span class=red>*</span>
+<select id="city">
+	<option value="" >CITY</option>
+	<option value="indore">INDORE</option>
+	<option value="mumbai">MUMBAI</option>
+	<option value="pune">PUNE</option>
+	<option value="rajasthan">RAJASTHAN</option>
+</select><span id="city_error" class="red"></span><br><br>
+GENDER:-<span class="red">*</span>
+<input type="radio" name="gender"  value="male" >MALE
+<input type="radio" name="gender"  value="female" >FEMALE
+<input type="radio" name="gender"  value="other" >OTHER
+<span class="red" id="radio_error"></span><br><br>
+HOBBY:-<span class="red">*</span>
+<input type="checkbox" name="hobby">Cricket
+<input type="checkbox" name="hobby">Coding
+<input type="checkbox" name="hobby">Reading
+<input type="checkbox" name="hobby">Singing<span id="check_error" class="red"></span>
+<br><br>
+IMAGE:-<span class="red">*</span><input type="file" name="image"><span class="red" id="img_error"></span><br><br>
+		<input type="submit" id="sub">
+	</form>
+</body>
+</html>

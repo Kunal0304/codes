@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.red
+		{
+			color: red;
+		}
+	</style>
+	<script>
+		function validation()
+		{
+			var CITY=document.getElementById("city").value;
+			//alert(CITY);
+			var result=true;
+			if(CITY=="")
+			{
+				document.getElementById("city_error").innerHTML="Plz Select City";
+				result= false;		
+			}
+			
+			return result;
+			
+		}
+	</script>
+</head>
+<body>
+	<form action="demo.html" onsubmit="return validation()">
+		City <span class="red">*</span>:-<select id="city">
+					<option value="">Select City</option>
+					<option value="Indore">Indore</option>
+					<option value="Bhopal">Bhopal</option>
+					<option value="Pune">Pune</option>
+					<option value="Dewas">Dewas</option>
+		     </select><span id="city_error" class="red"></span><br><br>
+		<input type="submit">
+	</form>
+
+</body>
+</html>

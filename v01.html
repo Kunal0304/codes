@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <script>
+        function val() {
+            
+            var va =document.getElementById("valid").value;
+            if (va =="") {
+                alert("heloo")
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="hello.html" onsubmit="return val()">
+    <input type="text" id="valid">
+    <input type="submit">
+    </form>
+</body>
+</html>

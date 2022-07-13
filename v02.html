@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+<script>
+    function valid() {
+       var name=document.getElementById("na").value;
+       var mail=document.getElementById("em").value;
+       var password=document.getElementById("pas").value;
+       var mobile=document.getElementById("mo").value;
+       var gen=document.getElementsByName("gender");
+       var len=document.getElementsByName("gender").length;
+       var check=document.getElementById("bb");
+       var chlen=document.getElementById("bb").length;
+            var result=true;
+       if ( name=="" || password=="" || mail=="" || mobile=="") {
+           document.getElementById("err").innerHTML="enter full detail";
+            result = false;
+       }
+       for (i = 0; i < len; i++) {
+
+          if(gen[i].checked==true){
+
+            document.getElementById("err_radio").innerHTML=""
+            
+          }
+
+          else
+          {
+            document.getElementById("err_radio").innerHTML=" enter value"
+                result = false;
+          }
+
+       }
+
+       for (i = 0; i < chlen; i++) {
+
+        if(check[i].checked==true){
+
+            result=false;
+        }
+    }
+           return result;
+
+        }
+        
+        </script>
+</head>
+<body>
+    <form action="demo.html" onsubmit="return valid()">
+        Name -: <input type="text" id=na placeholder="ENTER NAME" ><br><br>
+        Password -: <input type="password" id="pas" placeholder="PASSWORD"><br><br>
+        Email id -: <input type="email" id="em" placeholder="MAIL ID" ><br><br>
+        Mobile no. -: <input type="number" id="mo" placeholder="MOBILE NO."><br><br>
+        select gender -: 
+        <input type="radio" id="aa" name="gender">male
+        <input type="radio" id="aa" name="gender">female
+        <input type="radio" id="aa" name="gender">other <br>
+        <br><br>
+        select hobbay -:
+        <input id="bb" type="checkbox">criket
+        <input id="bb" type="checkbox">football
+        <input id="bb" type="checkbox">basketball
+        <input id="bb" type="checkbox">chess
+        <br><br>
+        <span id="err" style="color: blue;font-size: xx-large;"></span>
+    <input type="submit" >
+</form>
+</body>
+</html>
+
+
+

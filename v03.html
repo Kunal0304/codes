@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <style>
+        #err{
+            color: red;
+            font-size: 20px;
+        }
+    </style>
+
+    <script>
+        function cls() {
+            var result = true;
+            var Name=document.getElementById("name").value;
+            if (Name=="") {
+                document.getElementById("err").innerHTML = "plz fill the form";
+                 result=false
+            }
+            if (Name!="") {
+                document.getElementById("err").innerHTML = "";                
+            }
+
+
+            var Password=document.getElementById("Pass").value;
+            if (Password=="") {
+                document.getElementById("err-pass").innerHTML = "plz fill the password";
+                 result = false;
+            }
+            if (Password!="") {
+                document.getElementById("err-pass").innerHTML = "";
+                
+            }
+
+            var City=document.getElementById("city").value;
+            if (City=="") {
+                document.getElementById("err-city").innerHTML = "plz choose city";
+                 result = false;
+            }
+            if (City!="") {
+                document.getElementById("err-city").innerHTML = "";
+                
+            }
+
+            var Gen=document.getElementsByName("gender");
+            var len=document.getElementsByName("gender").length
+
+            for ( i = 0; i < len ; i++) {
+
+                if (Gen[i].checked == true) {
+
+                    document.getElementById("err_radio").innerHTML =""; 
+                    break;              
+                }
+                
+                else
+                {
+                    document.getElementById("err_radio").innerHTML ="plz select gender";
+                    result= false;
+                }
+            }
+
+
+            var che=document.getElementsByName("hob");
+            var le=document.getElementsByName("hob").length;
+
+            for ( j = 0; j < le ; j++) {
+
+                if (che[j].checked == true) {
+
+                    document.getElementById("err_hobby").innerHTML =""; 
+                    break;              
+                }
+                
+                else
+                {
+                    document.getElementById("err_hobby").innerHTML ="plz select hobby";
+                    result= false;
+                }
+            }
+
+            return result;
+        } 
+    </script>
+</head>
+<body>
+    <form action="demo.html" onsubmit="return cls()">
+        name-: <input type="text" id="name">
+        <span id="err" style="color: blue;font-size: x-large;"></span><br><br>
+
+        password-: <input type="password" id="Pass">
+        <span id="err-pass" style="color: blue;font-size: x-large;"></span><br><br>
+
+        <select id="city">
+            <option value="">Select Option</option>
+            <option value="indore">indore</option>
+            <option value="ujjain">ujjain</option>
+            <option value="dewas">dewas</option>
+            <option value="bhopal">bhopal</option>
+        </select>
+        <span id="err-city" style="color: blue;font-size: x-large;"></span><br><br>
+
+        <input type="radio" name="gender">Male
+        <input type="radio"  name="gender">Female
+        <input type="radio"  name="gender">Other 
+        <span id="err_radio" style="color: blue;font-size: x-large;"></span><br><br>
+
+        select hobbay -:
+        <input name="hob" type="checkbox">criket
+        <input name="hob" type="checkbox">football
+        <input name="hob" type="checkbox">basketball
+        <input name="hob" type="checkbox">chess
+        <span id="err_hobby" style="color: blue;font-size: x-large;"></span>
+        <br><br>
+        <input type="submit">
+    </form>
+</body>
+</html>

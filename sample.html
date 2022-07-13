@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+
+    <script>
+
+        function demo() {
+            var result=true;
+            var first = document.getElementById("fn").Value;
+
+           if (first == "") {         
+              alert("Plz Fill Name");
+               document.getElementById("err01").innerHTML="hello world";
+               result = false;
+           }
+
+           if (first != "") {
+
+            alert("Plz Fill Name number 2...");
+               
+           }
+           return result;
+
+        }
+
+    </script>
+</head>
+<body>
+    <form action="demo.html" onsubmit="return demo()">
+    
+        <input type="text" id=fn>
+        <span id=err01></span>
+        <input type="submit">
+    
+    </form>
+</body>
+</html>

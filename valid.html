@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function validation()
+		{
+			var USERNAME=document.getElementById("uname").value;
+			if(USERNAME=="")
+			{
+				alert("Plz Fill Name");
+				return false;		
+			}
+			
+			else
+			{
+				return true;
+			}
+		}
+	</script>
+</head>
+<body>
+	<form action="demo.html" onsubmit="return validation()">
+		Name:-<input type="text" id="uname"><br><br>
+		<input type="submit">
+	</form>
+
+</body>
+</html>

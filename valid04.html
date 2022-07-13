@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.red
+		{
+			color: red;
+		}
+	</style>
+	<script>
+		function validation()
+		{
+			var HOBBY=document.getElementsByName("hobby");
+			var CountCheckboxButton=document.getElementsByName("hobby").length;
+			//alert(CountRadioButton);
+			var result=false;
+			for(i=0;i<CountCheckboxButton;i++)
+			{
+				if(HOBBY[i].checked==true) 
+				{
+					result=true;
+				}
+				
+			}
+			if(result==false) 
+			{
+				document.getElementById("hobby_error").innerHTML="Plz Checked Hobby";
+			}
+			return result;
+						
+		}
+	</script>
+</head>
+<body>
+	<form action="demo.html" onsubmit="return validation()">
+		Hobby <span class="red">*</span>:-
+		<input type="checkbox"  name="hobby">Cricket
+		<input type="checkbox"  name="hobby">Football
+		<input type="checkbox"  name="hobby">Reading
+		<input type="checkbox"  name="hobby">Playing
+		<span id="hobby_error" class="red"></span><br><br>
+		<input type="submit">
+	</form>
+
+</body>
+</html>
